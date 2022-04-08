@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  react-boilerplate:
+    container_name: react-boilerplate
+    image: react-boilerplate
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+    command: npm run start api_root="${api_root}"

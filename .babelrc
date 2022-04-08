@@ -1,0 +1,41 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": [
+            ">0.25%",
+            "not ie 11",
+            "not op_mini all"
+          ]
+        }
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-class-properties",
+    ["module-resolver", {
+      "root": ["./src/"],
+      "alias": {
+        "hoc": "./src/hoc",
+        "api": "./src/api",
+        "components": "./src/components",
+        "hooks": "./src/hooks",
+        "utils": "./src/utils",
+        "widgets": "./src/widgets",
+        "context": "./src/context"
+      },
+      "cwd": "babelrc",
+      "extensions": ["js", "jsx"]
+    }]
+  ],
+  "env": {
+    "production": {
+      "plugins": ["transform-remove-console"]
+    }
+  }
+}

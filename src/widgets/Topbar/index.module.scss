@@ -1,0 +1,15 @@
+.topbar{
+    top: 0;
+    height: 102px;
+    padding: 2rem 0;
+    font-size: 38px;
+    color: #ffffff;
+    position: sticky;
+    box-sizing: border-box;
+    font-weight: 600;
+    background-color: #000000;
+    .content{
+        width: 1366px;
+        margin: 0 auto;
+    }
+}
